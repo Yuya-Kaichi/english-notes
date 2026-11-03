@@ -1,6 +1,15 @@
 // 表現データ。新しいものを配列の先頭に追加する。
 window.EXPRESSIONS = [
   {
+    ja: "知りたいパラメータの名称を教えてください",
+    en: "Could you tell me the names of the parameters you need?",
+    alt: ["Which parameters are you looking for?", "Could you let me know the exact parameter names?", "Could you send me a list of the parameters you need?"],
+    nuance: "直訳の the parameters you want to know は不自然。need / are looking for を使う。名前を正確に知りたいときは exact を付け、複数ありそうならリストで頼む。",
+    examples: ["Could you tell me the names of the parameters you need? I'll pull the data for you.", "Could you let me know the exact parameter names, so I can find them in the database?"],
+    tags: ["business", "data"],
+    date: "2026-11-03"
+  },
+  {
     ja: "英語でいいよ",
     en: "English is fine.",
     alt: ["Feel free to write it in English.", "No need to do it in Japanese.", "English is totally fine."],
