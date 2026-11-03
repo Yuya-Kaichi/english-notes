@@ -1,6 +1,15 @@
 // 表現データ。新しいものを配列の先頭に追加する。
 window.EXPRESSIONS = [
   {
+    ja: "どのセッションファイル（を見ている）？",
+    en: "Which session file are you looking at?",
+    alt: ["Which session are you looking at?", "Could you tell me which session file you're using?", "Could you share the file name or path?", "Are we looking at the same session?"],
+    nuance: "「見ている」は see ではなく look at。候補の中から1つを聞くので what より which。ファイル名やパスを正確に知りたいときは share the file name or path、話が噛み合わないときは Are we looking at the same session? で確認する。",
+    examples: ["Which session file are you looking at? I'm seeing different values on my end.", "Could you share the file name or path, so I can check the same data?"],
+    tags: ["business", "data"],
+    date: "2026-11-03"
+  },
+  {
     ja: "知りたいパラメータの名称を教えてください",
     en: "Could you tell me the names of the parameters you need?",
     alt: ["Which parameters are you looking for?", "Could you let me know the exact parameter names?", "Could you send me a list of the parameters you need?"],
