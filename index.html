@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>English Notes</title>
+<style>
+  :root {
+    --bg: #f7f7f5; --card: #ffffff; --text: #1f2328; --muted: #6a737d;
+    --border: #e3e3e0; --accent: #2563eb; --accent-soft: #e8efff; --chip: #f0f0ee;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #16181c; --card: #1f2227; --text: #e6e6e6; --muted: #9aa0a6;
+      --border: #2e3238; --accent: #6ea0ff; --accent-soft: #23304a; --chip: #2a2e34;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: system-ui, -apple-system, "Segoe UI", "Hiragino Sans", "Yu Gothic UI", sans-serif;
+    line-height: 1.6;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 24px 16px 64px; }
+  header h1 { font-size: 1.5rem; margin: 0 0 4px; }
+  header p { margin: 0 0 20px; color: var(--muted); font-size: .9rem; }
+  .controls { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+  .controls input {
+    flex: 1 1 220px; padding: 10px 12px; font-size: 1rem;
+    border: 1px solid var(--border); border-radius: 8px; background: var(--card); color: var(--text);
+  }
+  button {
+    font: inherit; cursor: pointer; border: 1px solid var(--border); border-radius: 8px;
+    background: var(--card); color: var(--text); padding: 8px 12px;
+  }
+  button:hover { border-color: var(--accent); }
+  button.on { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 20px; }
+  .tags button { padding: 4px 10px; font-size: .85rem; border-radius: 999px; background: var(--chip); }
+  .tags button.on { background: var(--accent); color: #fff; }
+  .count { color: var(--muted); font-size: .85rem; margin-bottom: 8px; }
+  .card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+    padding: 16px; margin-bottom: 12px;
+  }
+  .ja { font-size: .95rem; color: var(--muted); }
+  .en-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin: 2px 0 6px; }
+  .en { font-size: 1.3rem; font-weight: 600; }
+  .speak { padding: 2px 8px; font-size: .95rem; }
+  .alt { font-size: .9rem; margin: 4px 0; }
+  .alt span { display: inline-flex; align-items: center; gap: 4px; margin-right: 10px; }
+  .nuance { font-size: .9rem; background: var(--accent-soft); border-radius: 8px; padding: 8px 10px; margin: 8px 0; }
+  ul.ex { margin: 6px 0; padding-left: 0; list-style: none; }
+  ul.ex li { display: flex; gap: 6px; align-items: flex-start; margin: 4px 0; font-style: italic; }
+  .meta { display: flex; justify-content: space-between; font-size: .8rem; color: var(--muted); margin-top: 8px; }
+  .hidden-answer { filter: blur(6px); user-select: none; cursor: pointer; }
+  .quiz-hint { font-size: .8rem; color: var(--muted); }
+  .empty { text-align: center; color: var(--muted); padding: 40px 0; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>English Notes</h1>
+    <p>「これって英語でなんて言う？」のメモ帳</p>
+  </header>
+
+  <div class="controls">
+    <input id="q" type="search" placeholder="日本語・英語で検索">
+    <button id="slow" title="ゆっくり再生">🐢 ゆっくり</button>
+    <button id="quiz" title="英語を隠して復習">🎯 クイズ</button>
+    <button id="shuffle" title="順番をシャッフル">🔀</button>
+  </div>
+  <div class="tags" id="tags"></div>
+  <div class="count" id="count"></div>
+  <div id="list"></div>
+</div>
+
+<script src="data.js"></script>
+<script>
+  const data = (window.EXPRESSIONS || []).map((e, i) => ({ ...e, _i: i }));
+  const state = { q: "", tag: null, slow: false, quiz: false, order: null, revealed: new Set() };
+
+  // 英語の音声を選ぶ（Natural / Google 系を優先）
+  let voice = null;
+  function pickVoice() {
+    const vs = speechSynthesis.getVoices().filter(v => v.lang.startsWith("en"));
+    voice = vs.find(v => /natural/i.test(v.name) && v.lang === "en-US")
+         || vs.find(v => /google/i.test(v.name) && v.lang === "en-US")
+         || vs.find(v => v.lang === "en-US") || vs[0] || null;
+  }
+  if ("speechSynthesis" in window) {
+    pickVoice();
+    speechSynthesis.onvoiceschanged = pickVoice;
+  }
+  function speak(text) {
+    if (!("speechSynthesis" in window)) return alert("このブラウザは読み上げに対応していません");
+    speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = "en-US";
+    if (voice) u.voice = voice;
+    u.rate = state.slow ? 0.6 : 1;
+    speechSynthesis.speak(u);
+  }
+
+  const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const btn = text => `<button class="speak" data-say="${esc(text)}" title="再生">🔊</button>`;
+
+  function renderTags() {
+    const all = [...new Set(data.flatMap(e => e.tags || []))].sort();
+    document.getElementById("tags").innerHTML =
+      `<button data-tag="" class="${state.tag ? "" : "on"}">すべて</button>` +
+      all.map(t => `<button data-tag="${esc(t)}" class="${state.tag === t ? "on" : ""}">#${esc(t)}</button>`).join("");
+  }
+
+  function render() {
+    const q = state.q.toLowerCase();
+    let items = data.filter(e => {
+      if (state.tag && !(e.tags || []).includes(state.tag)) return false;
+      if (!q) return true;
+      return [e.ja, e.en, ...(e.alt || []), e.nuance, ...(e.examples || [])].join(" ").toLowerCase().includes(q);
+    });
+    if (state.order) items.sort((a, b) => state.order[a._i] - state.order[b._i]);
+
+    document.getElementById("count").textContent = `${items.length} 件`;
+    document.getElementById("list").innerHTML = items.length ? items.map(e => {
+      const hide = state.quiz && !state.revealed.has(e._i);
+      const enAttr = hide ? `class="en hidden-answer" data-reveal="${e._i}"` : `class="en"`;
+      return `<div class="card">
+        <div class="ja">${esc(e.ja)}</div>
+        <div class="en-row"><span ${enAttr}>${esc(e.en)}</span>${hide ? "" : btn(e.en)}</div>
+        ${hide ? `<div class="quiz-hint">タップで答えを表示</div>` : `
+        ${(e.alt || []).length ? `<div class="alt">言い換え: ${e.alt.map(a => `<span>${esc(a)} ${btn(a)}</span>`).join("")}</div>` : ""}
+        ${e.nuance ? `<div class="nuance">${esc(e.nuance)}</div>` : ""}
+        ${(e.examples || []).length ? `<ul class="ex">${e.examples.map(x => `<li>${btn(x)}<span>${esc(x)}</span></li>`).join("")}</ul>` : ""}
+        <div class="meta"><span>${(e.tags || []).map(t => "#" + esc(t)).join(" ")}</span><span>${esc(e.date || "")}</span></div>`}
+      </div>`;
+    }).join("") : `<div class="empty">該当する表現がありません</div>`;
+  }
+
+  document.getElementById("q").addEventListener("input", ev => { state.q = ev.target.value; render(); });
+  document.getElementById("tags").addEventListener("click", ev => {
+    const b = ev.target.closest("button"); if (!b) return;
+    state.tag = b.dataset.tag || null; renderTags(); render();
+  });
+  document.getElementById("slow").addEventListener("click", ev => {
+    state.slow = !state.slow; ev.currentTarget.classList.toggle("on", state.slow);
+  });
+  document.getElementById("quiz").addEventListener("click", ev => {
+    state.quiz = !state.quiz; state.revealed.clear();
+    ev.currentTarget.classList.toggle("on", state.quiz); render();
+  });
+  document.getElementById("shuffle").addEventListener("click", () => {
+    state.order = Object.fromEntries(data.map(e => [e._i, Math.random()])); render();
+  });
+  document.getElementById("list").addEventListener("click", ev => {
+    const s = ev.target.closest("[data-say]");
+    if (s) return speak(s.dataset.say);
+    const r = ev.target.closest("[data-reveal]");
+    if (r) {
+      const i = Number(r.dataset.reveal);
+      state.revealed.add(i); render();
+      speak(data[i].en);
+    }
+  });
+
+  renderTags();
+  render();
+</script>
+</body>
+</html>
