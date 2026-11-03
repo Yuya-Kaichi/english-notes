@@ -1,6 +1,15 @@
 // 表現データ。新しいものを配列の先頭に追加する。
 window.EXPRESSIONS = [
   {
+    ja: "これです、確認してね",
+    en: "Here it is. Please take a look.",
+    alt: ["Here you go — please take a look.", "Please see the image and link below.", "Here's the link and a screenshot. Let me know what you think.", "Could you check this when you get a chance?"],
+    nuance: "「確認して」を confirm にするのは間違いやすい（confirm は承認・確定の意味）。見てほしいなら take a look か check。チャットで貼ったものは attached より above / below で指す。when you get a chance で急がせない。",
+    examples: ["Here it is. Please take a look and let me know if anything's unclear.", "Please see the screenshot and link above. Could you check it when you get a chance?"],
+    tags: ["business", "chat"],
+    date: "2026-11-03"
+  },
+  {
     ja: "どのセッションファイル（を見ている）？",
     en: "Which session file are you looking at?",
     alt: ["Which session are you looking at?", "Could you tell me which session file you're using?", "Could you share the file name or path?", "Are we looking at the same session?"],
