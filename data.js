@@ -1,6 +1,15 @@
 // 表現データ。新しいものを配列の先頭に追加する。
 window.EXPRESSIONS = [
   {
+    ja: "ノック回数はこのパラメータでみているようです",
+    en: "It looks like the knock count is tracked by this parameter.",
+    alt: ["It looks like this parameter shows the knock count.", "The knock count seems to be monitored with this parameter.", "I think this is the parameter for the knock count."],
+    nuance: "ノック回数は knock count。「みている」は see ではなく track / monitor（記録・監視している）。「～のようです」は It looks like ~ / seems to ~ で確信がないことを柔らかく伝える。",
+    examples: ["It looks like the knock count is tracked by this parameter. Could you check if that's correct?", "I think this is the parameter for the knock count, but let me double-check with the team."],
+    tags: ["business", "data"],
+    date: "2026-11-03"
+  },
+  {
     ja: "連絡がきました。これです",
     en: "I heard back from the single-cylinder team. Here's the setup data.",
     alt: ["They got back to me — here it is.", "Sorry for the wait! Here's the setup data from the single-cylinder team.", "Just got it from the single-cylinder team. Please take a look."],
