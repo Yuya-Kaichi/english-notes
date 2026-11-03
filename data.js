@@ -1,6 +1,15 @@
 // 表現データ。新しいものを配列の先頭に追加する。
 window.EXPRESSIONS = [
   {
+    ja: "英語でいいよ",
+    en: "English is fine.",
+    alt: ["Feel free to write it in English.", "No need to do it in Japanese.", "English is totally fine."],
+    nuance: "資料作成などを頼むときは Feel free to ~ が柔らかく自然。No need to do it in Japanese は「日本語にする手間はいらない」と負担を減らす気遣いが伝わる。totally を付けると「本当に大丈夫」の安心感が出る。",
+    examples: ["Could you put together the slides? Feel free to write them in English.", "English is totally fine — no need to translate it into Japanese."],
+    tags: ["business"],
+    date: "2026-11-03"
+  },
+  {
     ja: "根回しする",
     en: "get buy-in beforehand",
     alt: ["lay the groundwork", "build consensus in advance"],
