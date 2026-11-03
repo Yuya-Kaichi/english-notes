@@ -1,6 +1,15 @@
 // 表現データ。新しいものを配列の先頭に追加する。
 window.EXPRESSIONS = [
   {
+    ja: "単気筒メンバーに問い合わせているから待ってね",
+    en: "I'm checking with the single-cylinder team. I'll get back to you soon.",
+    alt: ["I've reached out to the single-cylinder team about the setup data. I'll let you know once I hear back.", "Let me check with the single-cylinder team and get back to you.", "Thanks for your patience — I'm still waiting on the single-cylinder team."],
+    nuance: "単気筒は single-cylinder、「メンバー」は team が自然。問い合わせるは inquire より check with ~。「待ってね」は Please wait だと命令っぽいので、I'll get back to you / I'll let you know で伝える。待たせているときは Thanks for your patience でフォロー。",
+    examples: ["I'm checking with the single-cylinder team about the setup data. I'll get back to you soon.", "Thanks for your patience — I'll send the setup data as soon as I hear back from them."],
+    tags: ["business", "chat"],
+    date: "2026-11-03"
+  },
+  {
     ja: "これです、確認してね",
     en: "Here it is. Please take a look.",
     alt: ["Here you go — please take a look.", "Please see the image and link below.", "Here's the link and a screenshot. Let me know what you think.", "Could you check this when you get a chance?"],
