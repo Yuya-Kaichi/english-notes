@@ -1,6 +1,15 @@
 // 表現データ。新しいものを配列の先頭に追加する。
 window.EXPRESSIONS = [
   {
+    ja: "連絡がきました。これです",
+    en: "I heard back from the single-cylinder team. Here's the setup data.",
+    alt: ["They got back to me — here it is.", "Sorry for the wait! Here's the setup data from the single-cylinder team.", "Just got it from the single-cylinder team. Please take a look."],
+    nuance: "「連絡がきた」は hear back from ~ / get back to me。A contact came は通じない。前に送った I'll let you know once I hear back と対になる。待たせたときは Sorry for the wait! を添える。",
+    examples: ["Sorry for the wait! I heard back from the single-cylinder team. Here's the setup data.", "They got back to me — here it is. Let me know if you need anything else."],
+    tags: ["business", "chat"],
+    date: "2026-11-03"
+  },
+  {
     ja: "単気筒メンバーに問い合わせているから待ってね",
     en: "I'm checking with the single-cylinder team. I'll get back to you soon.",
     alt: ["I've reached out to the single-cylinder team about the setup data. I'll let you know once I hear back.", "Let me check with the single-cylinder team and get back to you.", "Thanks for your patience — I'm still waiting on the single-cylinder team."],
