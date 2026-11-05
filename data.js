@@ -1,6 +1,15 @@
 // 表現データ。新しいものを配列の先頭に追加する。
 window.EXPRESSIONS = [
   {
+    ja: "このパラメータのウィンドウはローリングです（判定区間は固定ではない）",
+    en: "This parameter uses a rolling window.",
+    alt: ["The detection window isn't fixed — it's a rolling window.", "It's a rolling window, not a fixed one.", "The window rolls forward over time, rather than being fixed.", "It uses a sliding window to count knocks."],
+    nuance: "ローリングは rolling window（sliding / moving window も同じ意味）。固定区間は fixed window。判定区間は detection window、評価区間なら evaluation window。not a fixed one と対比させると違いがはっきり伝わる。",
+    examples: ["The detection window isn't fixed — it's a rolling window.", "The knock count is calculated over a rolling window, not a fixed one."],
+    tags: ["business", "data"],
+    date: "2026-11-05"
+  },
+  {
     ja: "ノック回数はこのパラメータでみているようです",
     en: "It looks like the knock count is tracked by this parameter.",
     alt: ["It looks like this parameter shows the knock count.", "The knock count seems to be monitored with this parameter.", "I think this is the parameter for the knock count."],
