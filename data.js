@@ -1,6 +1,24 @@
 // 表現データ。新しいものを配列の先頭に追加する。
 window.EXPRESSIONS = [
   {
+    ja: "（図を作ってもらい）担当者にトスして費用を算出してもらう",
+    en: "I'd like to hand it off to them so they can estimate the costs.",
+    alt: ["I'll pass it on to them to estimate the costs.", "Could you create a diagram using this as a pilot case?"],
+    nuance: "トスする は hand it off to ~ / pass it on to ~。費用を算出する は calculate より estimate が自然。「モデルケース」は英語では pilot case / reference case（model case はあまり使わず、ML の model とも紛らわしい）。",
+    examples: ["Could you create an architecture diagram using this system as a pilot case?", "I'd like to hand it off to the finance team so they can estimate the costs."],
+    tags: ["business", "chat"],
+    date: "2026-11-09"
+  },
+  {
+    ja: "まずは〜できるようにしてください（理由も添えて依頼する）",
+    en: "Could you set up ~ as a first step?",
+    alt: ["For now, could you set up ~?", "I understand that ~ is also important."],
+    nuance: "まずは は as a first step（第一段階として）か for now。「〜を試したい」は try out ~、「今のモデルでも捉えられる」は can already catch。相手の考えを受け止めるなら I understand that ~ を添えると角が立たない。",
+    examples: ["Could you set up notifications to this group chat as a first step?", "I understand that improving the model's accuracy is also important."],
+    tags: ["business", "chat"],
+    date: "2026-11-09"
+  },
+  {
     ja: "このパラメータのウィンドウはローリングです（判定区間は固定ではない）",
     en: "This parameter uses a rolling window.",
     alt: ["The detection window isn't fixed — it's a rolling window.", "It's a rolling window, not a fixed one.", "The window rolls forward over time, rather than being fixed.", "It uses a sliding window to count knocks."],
