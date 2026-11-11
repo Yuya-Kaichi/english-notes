@@ -1,6 +1,15 @@
 // 表現データ。新しいものを配列の先頭に追加する。
 window.EXPRESSIONS = [
   {
+    ja: "〇〇くんに聞きます",
+    en: "I'll check with my colleague.",
+    alt: ["Let me check with my colleague and get back to you.", "I'll ask my colleague about it.", "My colleague should know. I'll ask them."],
+    nuance: "聞きます は I'll check with ~（確認を取る）が仕事向き。I'll ask ~ でもOK。「くん」は英語では付けない（「さん」は社内英語で使われることもあるが、「くん」は上下関係のニュアンスが強い）。名字だけで呼ぶ。I'll は「今決めて〜する」。",
+    examples: ["I'll check with my colleague and get back to you.", "My colleague should know the original parameter names. Let me check with them."],
+    tags: ["business", "chat"],
+    date: "2026-11-11"
+  },
+  {
     ja: "変な日本語になっているので、オリジナルのパラメータ名を教えてください",
     en: "The parameter names seem to have been translated into awkward Japanese. Could you tell me the original names?",
     alt: ["The Japanese parameter names are a bit confusing. Could you share the original ones?", "It looks like the names got lost in translation. What are the original parameter names?", "Could you give me the exact parameter names as they appear in the system?"],
