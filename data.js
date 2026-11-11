@@ -1,6 +1,15 @@
 // 表現データ。新しいものを配列の先頭に追加する。
 window.EXPRESSIONS = [
   {
+    ja: "変な日本語になっているので、オリジナルのパラメータ名を教えてください",
+    en: "The parameter names seem to have been translated into awkward Japanese. Could you tell me the original names?",
+    alt: ["The Japanese parameter names are a bit confusing. Could you share the original ones?", "It looks like the names got lost in translation. What are the original parameter names?", "Could you give me the exact parameter names as they appear in the system?"],
+    nuance: "変な は strange / weird より awkward（不自然な）が角が立たない。seem to have been translated で誰のせいでもない言い方になる。翻訳前と明示するなら the original English names。lost in translation は「翻訳で意味が分からなくなった」の決まり文句（ややカジュアル）。",
+    examples: ["The parameter names seem to have been translated into awkward Japanese. Could you tell me the original names?", "It looks like the names got lost in translation. Could you share the original English parameter names?"],
+    tags: ["business", "data"],
+    date: "2026-11-11"
+  },
+  {
     ja: "担当者に問い合わせたところ、以下の2点を確認したいとのことでした（質問を取り次ぐ）",
     en: "I checked with the support team, and they'd like to know two things:",
     alt: ["Where did you open the screen in your screenshot?", "Could you let me know when you get a chance?", "I'll pass your answers on to them."],
