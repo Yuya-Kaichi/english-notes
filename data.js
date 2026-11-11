@@ -1,6 +1,15 @@
 // 表現データ。新しいものを配列の先頭に追加する。
 window.EXPRESSIONS = [
   {
+    ja: "このパラメータの値は動いてます",
+    en: "The value of this parameter is changing.",
+    alt: ["This parameter is updating, so the data is coming in.", "The value isn't stuck — it's changing over time.", "This parameter fluctuates quite a bit."],
+    nuance: "値が「動く」に moving は使わない（物理的な移動に聞こえる）。changing（変化）、fluctuating（上下に変動）、updating（更新されている）で使い分ける。止まっていないことの強調は isn't stuck（張り付いていない）/ isn't flat（グラフが平らでない）。",
+    examples: ["The value of this parameter is changing, so the signal looks fine.", "This parameter isn't stuck — it's updating as expected."],
+    tags: ["business", "data"],
+    date: "2026-11-11"
+  },
+  {
     ja: "〇〇くんに聞きます",
     en: "I'll check with my colleague.",
     alt: ["Let me check with my colleague and get back to you.", "I'll ask my colleague about it.", "My colleague should know. I'll ask them."],
