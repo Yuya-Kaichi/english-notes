@@ -1,6 +1,15 @@
 // 表現データ。新しいものを配列の先頭に追加する。
 window.EXPRESSIONS = [
   {
+    ja: "〇号機の新しいRevだと値が動いていて、それより前は値が張り付いていました",
+    en: "The value is changing in the new revision, but it was stuck in the earlier ones.",
+    alt: ["The value updates in the new revision, whereas it stayed flat in earlier revisions.", "It looks like the issue was fixed in the new revision.", "I'm checking with my colleague on this."],
+    nuance: "号機は Unit（エンジン単体なら Engine #）。Rev には in を使う。値が張り付く は was stuck（一定値なら stuck at a constant value、グラフが平らなら flat）。「Rev215より前」は 215を含むなら Rev215 and earlier、含まないなら before Rev215。whereas で2つを対比できる。",
+    examples: ["On Unit 2, the value is changing in Rev 10, but it was stuck in Rev 9 and earlier.", "I'm checking with my colleague on this and will let you know once I hear back."],
+    tags: ["business", "data"],
+    date: "2026-11-11"
+  },
+  {
     ja: "この2つのパラメータは使っていませんでした",
     en: "We weren't using these two parameters.",
     alt: ["These two parameters weren't being used.", "It turns out we weren't using these two parameters.", "These two parameters aren't used in the model."],
