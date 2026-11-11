@@ -1,6 +1,15 @@
 // 表現データ。新しいものを配列の先頭に追加する。
 window.EXPRESSIONS = [
   {
+    ja: "シンプルです。あなたならすぐにできると思います。Claude にも聞いてみてください",
+    en: "It's pretty straightforward. I'm sure you can do it in no time. Feel free to ask Claude, too.",
+    alt: ["It shouldn't take long. I'm sure you'll have it done quickly.", "With your skills, it should be easy.", "Claude can help with the script, too."],
+    nuance: "シンプル は straightforward（手順が明快で難しくない）が仕事向き。simple は言い方次第で「簡単でしょ」と軽く聞こえることも。本人には名前でなく you、I think より I'm sure で信頼が伝わる。in no time は「あっという間に」。Claude に「さん」は不要、Feel free to ~ で押しつけない。",
+    examples: ["It's pretty straightforward — I'm sure you can do it in no time.", "Feel free to ask Claude, too. It can help with the script."],
+    tags: ["business", "chat"],
+    date: "2026-11-11"
+  },
+  {
     ja: "〜はどのパソコンで動いてますか？ ／ 〜するスクリプトを追加すれば良いです",
     en: "Which PC is your model running on? We just need to add a script that sends an HTTP POST request to Power Automate.",
     alt: ["Which machine is the model running on?", "All we need to do is add a script that sends an HTTP POST to Power Automate.", "It should be enough to add a script that sends an HTTP POST request."],
