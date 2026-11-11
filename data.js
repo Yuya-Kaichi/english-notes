@@ -1,6 +1,15 @@
 // 表現データ。新しいものを配列の先頭に追加する。
 window.EXPRESSIONS = [
   {
+    ja: "担当者に問い合わせたところ、以下の2点を確認したいとのことでした（質問を取り次ぐ）",
+    en: "I checked with the support team, and they'd like to know two things:",
+    alt: ["Where did you open the screen in your screenshot?", "Could you let me know when you get a chance?", "I'll pass your answers on to them."],
+    nuance: "問い合わせた は check with ~。「確認したいとのこと」は confirm ではなく they'd like to know。「どこから開いた画面」は Where did you open ~ from?（文末の from を忘れない）。「お伝えします」は pass ~ on to ~。性別が分からない相手の代名詞は they。",
+    examples: ["I checked with the support team, and they'd like to know two things.", "Could you let me know when you get a chance? I'll pass your answers on to them."],
+    tags: ["business", "chat"],
+    date: "2026-11-11"
+  },
+  {
     ja: "暫定対応として採用しても良いならやってみてください",
     en: "If you're okay with using it as a temporary workaround, please give it a try.",
     alt: ["If that works for you as an interim solution, go ahead and give it a try.", "If you think it's fine as a stopgap, feel free to try it out.", "Up to you, but if a temporary workaround is acceptable, I'd suggest giving it a try."],
