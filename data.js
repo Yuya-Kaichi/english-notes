@@ -154,11 +154,11 @@ window.EXPRESSIONS = [
     date: "2026-11-03"
   },
   {
-    ja: "どのセッションファイル（を見ている）？",
+    ja: "どのセッションファイル（を見ている）？ ／ どの.ssnファイルですか？",
     en: "Which session file are you looking at?",
-    alt: ["Which session are you looking at?", "Could you tell me which session file you're using?", "Could you share the file name or path?", "Are we looking at the same session?"],
-    nuance: "「見ている」は see ではなく look at。候補の中から1つを聞くので what より which。ファイル名やパスを正確に知りたいときは share the file name or path、話が噛み合わないときは Are we looking at the same session? で確認する。",
-    examples: ["Which session file are you looking at? I'm seeing different values on my end.", "Could you share the file name or path, so I can check the same data?"],
+    alt: ["Which session are you looking at?", "Could you tell me which session file you're using?", "Could you share the file name or path?", "Are we looking at the same session?", "Which .ssn file is it?", "Could you send me the .ssn file?"],
+    nuance: "「見ている」は see ではなく look at。候補の中から1つを聞くので what より which。ファイル名やパスを正確に知りたいときは share the file name or path、話が噛み合わないときは Are we looking at the same session? で確認する。拡張子 .ssn は口頭で dot S-S-N と1文字ずつ読み、the .ssn file と the を付ける。",
+    examples: ["Which session file are you looking at? I'm seeing different values on my end.", "Could you share the file name or path, so I can check the same data?", "Which .ssn file are you looking at? Could you share the file name?"],
     tags: ["business", "data"],
     date: "2026-11-03"
   },
