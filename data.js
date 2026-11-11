@@ -1,6 +1,15 @@
 // 表現データ。新しいものを配列の先頭に追加する。
 window.EXPRESSIONS = [
   {
+    ja: "〜はどのパソコンで動いてますか？ ／ 〜するスクリプトを追加すれば良いです",
+    en: "Which PC is your model running on? We just need to add a script that sends an HTTP POST request to Power Automate.",
+    alt: ["Which machine is the model running on?", "All we need to do is add a script that sends an HTTP POST to Power Automate.", "It should be enough to add a script that sends an HTTP POST request."],
+    nuance: "プログラムが「動く」は run、「〜の上で」は on（Which PC is ~ running on?）。「〜すれば良い」は It is good to ~ だと「〜するのは良いことだ」になるので、We just need to ~ / All we need to do is ~。主語を we にすると協力的に聞こえる。",
+    examples: ["Which PC is your anomaly detection model running on?", "We just need to add a script to the notification program that sends an HTTP POST request to Power Automate."],
+    tags: ["business", "chat"],
+    date: "2026-11-11"
+  },
+  {
     ja: "やったことがあるのでフォローできます",
     en: "I've done it before, so I can help you set it up.",
     alt: ["I've set it up before, so I'm happy to help.", "I've done this before, so I can walk you through it.", "I have some experience with it, so feel free to reach out if you need help."],
