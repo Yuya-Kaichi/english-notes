@@ -1,6 +1,15 @@
 // 表現データ。新しいものを配列の先頭に追加する。
 window.EXPRESSIONS = [
   {
+    ja: "新しいRevではセンサーが使われていて、値が張り付いている以前のRevでは使われていませんでした",
+    en: "The sensor is used in the new revision. In the earlier revisions where the value was stuck, the sensor wasn't being used.",
+    alt: ["The new revision uses the sensor, but the earlier revisions with the stuck values didn't.", "That explains why the value was stuck — the sensor wasn't being used in those revisions."],
+    nuance: "センサーが使われている は is used / is in use。where でつなぐと「値が張り付いていた以前のRevでは」と対象を絞れる。原因を具体的に言うなら wasn't enabled（設定で無効）、wasn't connected（物理的に未接続）、wasn't installed（付いていない）。That explains why ~ で「だから〜だったのか」。",
+    examples: ["The sensor is used in Rev 10, but it wasn't being used in the earlier revisions where the value was stuck.", "That explains why the value was stuck — the sensor wasn't enabled in those revisions."],
+    tags: ["business", "data"],
+    date: "2026-11-11"
+  },
+  {
     ja: "〇号機の新しいRevだと値が動いていて、それより前は値が張り付いていました",
     en: "The value is changing in the new revision, but it was stuck in the earlier ones.",
     alt: ["The value updates in the new revision, whereas it stayed flat in earlier revisions.", "It looks like the issue was fixed in the new revision.", "I'm checking with my colleague on this."],
