@@ -1,6 +1,15 @@
 // 表現データ。新しいものを配列の先頭に追加する。
 window.EXPRESSIONS = [
   {
+    ja: "暫定対応として採用しても良いならやってみてください",
+    en: "If you're okay with using it as a temporary workaround, please give it a try.",
+    alt: ["If that works for you as an interim solution, go ahead and give it a try.", "If you think it's fine as a stopgap, feel free to try it out.", "Up to you, but if a temporary workaround is acceptable, I'd suggest giving it a try."],
+    nuance: "採用する を adopt にすると方針を正式に決めるような堅さが出る。相手の判断にゆだねるなら If you're okay with ~ / If it works for you。やってみて は Please do it だと指示っぽいので give it a try / go ahead and try it。go ahead は背中を押す表現。",
+    examples: ["If you're okay with using it as a temporary workaround, please give it a try.", "If that works for you as an interim solution, go ahead and give it a try."],
+    tags: ["business", "chat"],
+    date: "2026-11-11"
+  },
+  {
     ja: "シンプルです。あなたならすぐにできると思います。Claude にも聞いてみてください",
     en: "It's pretty straightforward. I'm sure you can do it in no time. Feel free to ask Claude, too.",
     alt: ["It shouldn't take long. I'm sure you'll have it done quickly.", "With your skills, it should be easy.", "Claude can help with the script, too."],
