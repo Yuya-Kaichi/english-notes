@@ -1,6 +1,15 @@
 // 表現データ。新しいものを配列の先頭に追加する。
 window.EXPRESSIONS = [
   {
+    ja: "毎回キャプチャを貼るのは大変ですよね",
+    en: "It must be a hassle to paste screenshots every time.",
+    alt: ["I know it's a pain to paste screenshots every time.", "Pasting screenshots every time must be tedious.", "Pasting screenshots manually every time isn't ideal."],
+    nuance: "キャプチャは screenshot（capture 単体は通じにくい）。大変 を hard / difficult にすると「難しい」になるので、手間なら hassle / pain / tedious。It must be ~ で相手の苦労を思いやる。いたわりの一言 → 提案 の順にすると押しつけ感がない。",
+    examples: ["It must be a hassle to paste screenshots every time. How about using Power Automate as a temporary workaround?", "I know it's a pain to paste screenshots manually. Would it make sense to automate it for now?"],
+    tags: ["business", "chat"],
+    date: "2026-11-11"
+  },
+  {
     ja: "暫定対応として Power Automate を使いますか（提案）",
     en: "How about using Power Automate as a temporary workaround?",
     alt: ["Should we use Power Automate as a temporary workaround?", "Would it make sense to use Power Automate for now?", "As an interim solution, we could use Power Automate."],
