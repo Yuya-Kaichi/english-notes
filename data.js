@@ -1,6 +1,15 @@
 // 表現データ。新しいものを配列の先頭に追加する。
 window.EXPRESSIONS = [
   {
+    ja: "やったことがあるのでフォローできます",
+    en: "I've done it before, so I can help you set it up.",
+    alt: ["I've set it up before, so I'm happy to help.", "I've done this before, so I can walk you through it.", "I have some experience with it, so feel free to reach out if you need help."],
+    nuance: "フォロー は help / support。英語の follow は「ついていく・従う」の意味で、手助けの意味にならない。経験は現在完了 I've done / set it up before。walk you through は「手順を一緒に追って説明する」。I'm happy to help で押しつけ感がなくなる。",
+    examples: ["I've set it up before, so I'm happy to help.", "How about using Power Automate as a temporary workaround? I've done it before, so I can walk you through it."],
+    tags: ["business", "chat"],
+    date: "2026-11-11"
+  },
+  {
     ja: "毎回キャプチャを貼るのは大変ですよね",
     en: "It must be a hassle to paste screenshots every time.",
     alt: ["I know it's a pain to paste screenshots every time.", "Pasting screenshots every time must be tedious.", "Pasting screenshots manually every time isn't ideal."],
