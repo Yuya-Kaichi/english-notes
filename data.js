@@ -1,6 +1,15 @@
 // 表現データ。新しいものを配列の先頭に追加する。
 window.EXPRESSIONS = [
   {
+    ja: "暫定対応として Power Automate を使いますか（提案）",
+    en: "How about using Power Automate as a temporary workaround?",
+    alt: ["Should we use Power Automate as a temporary workaround?", "Would it make sense to use Power Automate for now?", "As an interim solution, we could use Power Automate."],
+    nuance: "「使いますか」を Do you use ~? と直訳すると「普段使っていますか」という習慣の質問になる。提案は How about ~ing? / Should we ~?。暫定対応は temporary workaround（回避策）、interim solution（つなぎの解決策・やや硬い）、stopgap（その場しのぎ・口語でややネガティブ）。",
+    examples: ["How about using Power Automate as a temporary workaround until the model is ready?", "Would it make sense to use Power Automate for now? We can switch to a proper solution later."],
+    tags: ["business", "chat"],
+    date: "2026-11-11"
+  },
+  {
     ja: "（図を作ってもらい）担当者にトスして費用を算出してもらう",
     en: "I'd like to hand it off to them so they can estimate the costs.",
     alt: ["I'll pass it on to them to estimate the costs.", "Could you create a diagram using this as a pilot case?"],
