@@ -1,6 +1,15 @@
 // 表現データ。新しいものを配列の先頭に追加する。
 window.EXPRESSIONS = [
   {
+    ja: "この2つのパラメータは使っていませんでした",
+    en: "We weren't using these two parameters.",
+    alt: ["These two parameters weren't being used.", "It turns out we weren't using these two parameters.", "These two parameters aren't used in the model."],
+    nuance: "使っていなかった は過去進行形 weren't using。We weren't using は「自分たちが」、受け身 weren't used / weren't being used は誰がをぼかす。調べて分かったなら It turns out ~。今も使っていないなら現在形 aren't used in ~ で、どこで使っていないかを添える。",
+    examples: ["It turns out we weren't using these two parameters, so we can ignore them.", "These two parameters aren't used in the detection logic."],
+    tags: ["business", "data"],
+    date: "2026-11-11"
+  },
+  {
     ja: "このパラメータの値は動いてます",
     en: "The value of this parameter is changing.",
     alt: ["This parameter is updating, so the data is coming in.", "The value isn't stuck — it's changing over time.", "This parameter fluctuates quite a bit."],
