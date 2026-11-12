@@ -1,6 +1,15 @@
 // 表現データ。新しいものを配列の先頭に追加する。
 window.EXPRESSIONS = [
   {
+    ja: "通知には、何で異常と捉えたかとエンジニアに何を確認してほしいかを入れるのはどうでしょうか？すでに書いてあるので、それを使うのが良いと思います",
+    en: "How about including why it was flagged as an anomaly and what we'd like the engineers to check?",
+    alt: ["You've already written this in the HTML, so I think we can reuse it.", "For case 1, I think a simple notification works best.", "For the charts, how about attaching a link or an image?"],
+    nuance: "注意を促す は draw attention、緊急で止める は stop ~ immediately in an emergency。「〜が良い」は is good より works best。何で異常と捉えたか は why it was flagged as an anomaly（flag ＝ 異常として検出する）。すでにあるものを流用するなら reuse。Personally, I'd like ~ で「あくまで私の希望」と控えめに。",
+    examples: ["I think there are two cases: issuing a warning to draw attention, and stopping the test immediately in an emergency.", "Personally, I'd like to receive the notifications in Teams."],
+    tags: ["business", "chat"],
+    date: "2026-11-12"
+  },
+  {
     ja: "新しいRevではセンサーが使われていて、値が張り付いている以前のRevでは使われていませんでした",
     en: "The sensor is used in the new revision. In the earlier revisions where the value was stuck, the sensor wasn't being used.",
     alt: ["The new revision uses the sensor, but the earlier revisions with the stuck values didn't.", "That explains why the value was stuck — the sensor wasn't being used in those revisions."],
