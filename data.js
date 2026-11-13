@@ -1,6 +1,15 @@
 // 表現データ。新しいものを配列の先頭に追加する。
 window.EXPRESSIONS = [
   {
+    ja: "たたき台はつくるので、一緒に取り組みましょう",
+    en: "I'll put together a first draft, so let's work on it together.",
+    alt: ["I'll draft something up as a starting point, and we can work on it together.", "Let me put together a rough draft, and then we can refine it together.", "I'll take a first pass at it, and we can build on it together."],
+    nuance: "たたき台 は first draft（最初の案・一般的）、rough draft（荒い下書き・謙遜）、starting point（議論の出発点）。つくる は make より put together（まとめて作る）。refine は「磨き上げる」、take a first pass は「まずざっとやってみる」、build on は「それをもとに発展させる」。",
+    examples: ["I'll put together a first draft, so let's work on it together.", "Let me put together a rough draft, and then we can refine it together."],
+    tags: ["business", "chat"],
+    date: "2026-11-13"
+  },
+  {
     ja: "通知には、何で異常と捉えたかとエンジニアに何を確認してほしいかを入れるのはどうでしょうか？すでに書いてあるので、それを使うのが良いと思います",
     en: "How about including why it was flagged as an anomaly and what we'd like the engineers to check?",
     alt: ["You've already written this in the HTML, so I think we can reuse it.", "For case 1, I think a simple notification works best.", "For the charts, how about attaching a link or an image?"],
