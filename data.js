@@ -1,6 +1,15 @@
 // 表現データ。新しいものを配列の先頭に追加する。
 window.EXPRESSIONS = [
   {
+    ja: "補足ありがとうございます。理解が深まりました",
+    en: "Thanks for the additional info. That really helped me understand it better.",
+    alt: ["Thanks for the clarification — it makes much more sense now.", "Thank you for the extra details. I have a much clearer picture now.", "That's really helpful, thanks! I understand it much better now."],
+    nuance: "補足 は additional info（追加情報）、clarification（疑問点をはっきりさせてもらった）、extra details。supplement はサプリや付録のイメージで不自然。理解が深まった は My understanding deepened だと硬いので、helped me understand it better / makes much more sense now / have a clearer picture で相手のおかげと伝える。",
+    examples: ["Thanks for the clarification — it makes much more sense now.", "Thank you for the additional info. That really helped me understand how the sensor works."],
+    tags: ["business", "chat"],
+    date: "2026-11-13"
+  },
+  {
     ja: "合ってますか？",
     en: "Is that right?",
     alt: ["Is this correct?", "Did I get that right?", "Am I on the right track?", "Just to confirm, is this correct?", "Does that sound right to you?"],
