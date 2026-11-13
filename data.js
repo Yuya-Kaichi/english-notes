@@ -1,6 +1,15 @@
 // 表現データ。新しいものを配列の先頭に追加する。
 window.EXPRESSIONS = [
   {
+    ja: "合ってますか？",
+    en: "Is that right?",
+    alt: ["Is this correct?", "Did I get that right?", "Am I on the right track?", "Just to confirm, is this correct?", "Does that sound right to you?"],
+    nuance: "内容の正しさは Is that right? / Is this correct?（correct はやや硬め）、自分の理解の確認は Did I get that right?、進め方の確認は Am I on the right track?。Are you right? は「あなたは正しいの？」と相手を疑う響きになるので注意。Just to confirm の confirm は「確認する」で正しい用法。",
+    examples: ["So the sensor wasn't being used in the earlier revisions. Did I get that right?", "It looks like this parameter tracks the knock count. Is that right?"],
+    tags: ["business", "chat"],
+    date: "2026-11-13"
+  },
+  {
     ja: "日本人は、ローマ字が苦手です。英語で大丈夫ですよ",
     en: "Actually, Japanese people often find romaji hard to read, so feel free to write in English.",
     alt: ["Romaji is actually pretty hard for Japanese people to read, so English is totally fine.", "No need to write in romaji — English works just as well for us.", "We actually read English more easily than romaji, so please don't worry about it."],
