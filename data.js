@@ -1,6 +1,15 @@
 // 表現データ。新しいものを配列の先頭に追加する。
 window.EXPRESSIONS = [
   {
+    ja: "日本人は、ローマ字が苦手です。英語で大丈夫ですよ",
+    en: "Actually, Japanese people often find romaji hard to read, so feel free to write in English.",
+    alt: ["Romaji is actually pretty hard for Japanese people to read, so English is totally fine.", "No need to write in romaji — English works just as well for us.", "We actually read English more easily than romaji, so please don't worry about it."],
+    nuance: "苦手 を are bad at にすると角が立つうえ、何が苦手か曖昧。読みにくいなら find ~ hard to read。often を入れると「日本人はみんな」という決めつけが和らぐ。Actually で「実は」と柔らかく切り出す。英語で大丈夫 は feel free to write in English。",
+    examples: ["Actually, Japanese people often find romaji hard to read, so feel free to write in English.", "No need to write in romaji — English works just as well for us."],
+    tags: ["business", "chat"],
+    date: "2026-11-13"
+  },
+  {
     ja: "たたき台はつくるので、一緒に取り組みましょう",
     en: "I'll put together a first draft, so let's work on it together.",
     alt: ["I'll draft something up as a starting point, and we can work on it together.", "Let me put together a rough draft, and then we can refine it together.", "I'll take a first pass at it, and we can build on it together."],
@@ -221,7 +230,7 @@ window.EXPRESSIONS = [
     en: "English is fine.",
     alt: ["Feel free to write it in English.", "No need to do it in Japanese.", "English is totally fine."],
     nuance: "資料作成などを頼むときは Feel free to ~ が柔らかく自然。No need to do it in Japanese は「日本語にする手間はいらない」と負担を減らす気遣いが伝わる。totally を付けると「本当に大丈夫」の安心感が出る。",
-    examples: ["Could you put together the slides? Feel free to write them in English.", "English is totally fine — no need to translate it into Japanese."],
+    examples: ["Could you put together the slides? Feel free to write them in English.", "English is totally fine — no need to translate it into Japanese.", "Japanese people often find romaji hard to read, so feel free to write in English."],
     tags: ["business"],
     date: "2026-11-03"
   },
