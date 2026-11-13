@@ -1,6 +1,15 @@
 // 表現データ。新しいものを配列の先頭に追加する。
 window.EXPRESSIONS = [
   {
+    ja: "値の出どころは確認するのでお待ちください。今日の資料も大切なので大丈夫ですよ。他の人に良さを伝えるという観点で一緒に資料作りましょう",
+    en: "I'll check where the values come from and get back to you. Today's slides are important too, so no worries. Let's work on them together, with a focus on showing others how useful this is.",
+    alt: ["I'll look into where the values come from. In the meantime, today's slides matter too, so don't worry.", "Let's put the slides together with the goal of helping others see the value of this work.", "Let's make the slides together so others can see how useful this is."],
+    nuance: "出どころ は the source of ~ より where ~ comes from が会話的。お待ちください は Please wait ではなく get back to you。大丈夫ですよ（気にしないで）は no worries。良さを伝える は show others how useful this is / communicate the value。観点で は from the viewpoint of より with a focus on ~。発表資料は slides。",
+    examples: ["I'll check where the values come from and get back to you.", "Let's work on the slides together, with a focus on showing others how useful this is."],
+    tags: ["business", "chat"],
+    date: "2026-11-13"
+  },
+  {
     ja: "補足ありがとうございます。理解が深まりました",
     en: "Thanks for the additional info. That really helped me understand it better.",
     alt: ["Thanks for the clarification — it makes much more sense now.", "Thank you for the extra details. I have a much clearer picture now.", "That's really helpful, thanks! I understand it much better now."],
