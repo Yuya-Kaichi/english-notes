@@ -1,6 +1,15 @@
 // 表現データ。新しいものを配列の先頭に追加する。
 window.EXPRESSIONS = [
   {
+    ja: "個人チャットではなく、チームのチャットで連絡してください。全員に情報共有するためです",
+    en: "I have a small request: could you post in the team chat instead of messaging me directly? That way, everyone stays in the loop.",
+    alt: ["Could you send these messages to the team chat rather than to me? It helps keep everyone on the same page.", "Going forward, please use the team chat so the whole team can see the updates.", "Also, a quick question: have you checked with the security team about this?", "By the way, did you get a chance to check with them about security?"],
+    nuance: "お願いがあります は I have a small request / a favor to ask（small で責める感じが消える）。個人チャット は direct message / DM / private chat（personal chat とはあまり言わない）。グループに書き込むは post in ~。情報共有 は everyone stays in the loop / on the same page。質問です は a quick question。確認しましたか は現在完了 Have you checked with ~?、催促っぽさを抑えるなら did you get a chance to ~?。",
+    examples: ["Could you post in the team chat instead of messaging me directly? That way, everyone stays in the loop.", "Quick question: have you checked with the security team about this?"],
+    tags: ["business", "chat"],
+    date: "2026-11-19"
+  },
+  {
     ja: "pMaxはCPSの値です",
     en: "pMax is the value from the CPS.",
     alt: ["pMax comes from the CPS.", "I checked, and pMax is measured by the CPS.", "pMax is taken from the CPS signal."],
