@@ -1,6 +1,15 @@
 // 表現データ。新しいものを配列の先頭に追加する。
 window.EXPRESSIONS = [
   {
+    ja: "すみませんでした、理解しました。稼働状況確認したら落ちていました。再起動するのでお待ちください。別のPCでDockerを使って動かす運用に変更しようと考えています",
+    en: "Sorry about that — I understand now. I checked the status, and it was down. I'm restarting it now and will let you know once it's back up.",
+    alt: ["My apologies, I misunderstood. Thanks for explaining.", "It had stopped, so I'm rebooting it. It should be back up in a few minutes.", "We're planning to move it to a different PC and run it with Docker.", "Going forward, we're thinking of running it in Docker on a separate PC."],
+    nuance: "軽いお詫びは Sorry about that（I'm very sorry は重い）。理解しました は I understand now / Got it。サーバーが落ちた は was down（fell down とは言わない）、復旧は back up。お待ちください は will let you know once ~。運用に変更 は change the operation と直訳せず、move ~ / run it with ~ と動詞で言う。planning は予定、thinking of は検討段階。",
+    examples: ["I checked the status, and the service was down. I'm restarting it now and will let you know once it's back up.", "We're planning to move Kafka to a different PC and run it with Docker."],
+    tags: ["business", "chat"],
+    date: "2026-11-19"
+  },
+  {
     ja: "PCの稼働状況確認します。なぜ〇〇さんにPCについて問い合わせがあったのですか？",
     en: "I'll check the status of the PC. Could I ask why my colleague was contacted about it?",
     alt: ["I'll check if the PC is up and running.", "Just curious, what was the reason my colleague got a question about the PC?", "Do you know why my colleague was asked about the PC?"],
