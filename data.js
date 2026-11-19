@@ -1,6 +1,15 @@
 // 表現データ。新しいものを配列の先頭に追加する。
 window.EXPRESSIONS = [
   {
+    ja: "PCの稼働状況確認します。なぜ〇〇さんにPCについて問い合わせがあったのですか？",
+    en: "I'll check the status of the PC. Could I ask why my colleague was contacted about it?",
+    alt: ["I'll check if the PC is up and running.", "Just curious, what was the reason my colleague got a question about the PC?", "Do you know why my colleague was asked about the PC?"],
+    nuance: "稼働状況 は status、正常に動いているかなら up and running。問い合わせがあった は受け身 was contacted about ~ で誰がをぼかせる。文頭の Why did ~? は問い詰める響きになりやすいので、Could I ask why ~? / Just curious, ~ で柔らかく。2回目は about it で繰り返しを避ける。",
+    examples: ["I'll check the status of the Kafka PC.", "Could I ask why my colleague was contacted about the Kafka PC?"],
+    tags: ["business", "chat"],
+    date: "2026-11-19"
+  },
+  {
     ja: "個人チャットではなく、チームのチャットで連絡してください。全員に情報共有するためです",
     en: "I have a small request: could you post in the team chat instead of messaging me directly? That way, everyone stays in the loop.",
     alt: ["Could you send these messages to the team chat rather than to me? It helps keep everyone on the same page.", "Going forward, please use the team chat so the whole team can see the updates.", "Also, a quick question: have you checked with the security team about this?", "By the way, did you get a chance to check with them about security?"],
